@@ -23,12 +23,20 @@ function Loader() {
 }
 
 const searchParams = new URLSearchParams(location.search);
-const environment = (searchParams.get('environment') as EnvPreset) || 'forest';
+const bg = searchParams.get('bg') || 'white';
 
 function App() {
   return (
     <main className="">
-      <article className="h-screen">
+      <article
+        className="h-screen"
+        style={{
+          background: bg,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+        }}
+      >
         {/* <TestCanvas /> */}
         <Scene />
       </article>
@@ -42,7 +50,9 @@ const Scene = () => {
       <OrbitControls />
       <Suspense fallback={<Loader />}>
         <Model scale={0.001} />
-        <Environment preset={environment} background />
+        {/* <Environment preset={environment} background /> */}
+        <ambientLight color="white" intensity={0.5} />
+        <directionalLight color="white" position={[0, 0, 5]} />
       </Suspense>
     </Canvas>
   );
