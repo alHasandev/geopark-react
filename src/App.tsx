@@ -27,8 +27,8 @@ const environment = (searchParams.get('environment') as EnvPreset) || 'forest';
 
 function App() {
   return (
-    <main className="border">
-      <article className="border h-screen p-4">
+    <main className="">
+      <article className="h-screen">
         {/* <TestCanvas /> */}
         <Scene />
       </article>
