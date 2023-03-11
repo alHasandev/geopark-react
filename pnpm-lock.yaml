@@ -1,6 +1,7 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
+  '@react-three/cannon': ^6.5.2
   '@react-three/drei': ^9.32.7
   '@react-three/fiber': ^8.8.7
   '@types/react': ^18.0.17
@@ -17,8 +18,9 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
-  '@react-three/drei': 9.32.7_81ae07c1de1b447621ec29f562086018
-  '@react-three/fiber': 8.8.7_2137c920617d15d2047c79c8f29af71a
+  '@react-three/cannon': 6.5.2_uhpwtqxveqbhj627ldjxqgr2ti
+  '@react-three/drei': 9.32.7_qgxapqo6dnchmipmfh2wecdada
+  '@react-three/fiber': 8.8.7_ee34sidbpuk5ebd4phepfgxxdi
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   three: 0.145.0
@@ -30,7 +32,7 @@ devDependencies:
   '@vitejs/plugin-react': 2.1.0_vite@3.1.4
   autoprefixer: 10.4.12_postcss@8.4.17
   postcss: 8.4.17
-  tailwindcss: 3.1.8
+  tailwindcss: 3.1.8_postcss@8.4.17
   typescript: 4.8.4
   vite: 3.1.4
 
@@ -410,6 +412,14 @@ packages:
       fastq: 1.13.0
     dev: true
 
+  /@pmndrs/cannon-worker-api/2.3.2_three@0.145.0:
+    resolution: {integrity: sha512-+4YGTH7XfSvUYUa65LoltcDMRLu3lr7rFtHT9dmeCeu2JJ7Zg2xBFJ5wiWSJmcM1ECh2R0YDcROdEQ1JKpOgFA==}
+    peerDependencies:
+      three: '>=0.139'
+    dependencies:
+      three: 0.145.0
+    dev: false
+
   /@react-spring/animated/9.5.5_react@18.2.0:
     resolution: {integrity: sha512-glzViz7syQ3CE6BQOwAyr75cgh0qsihm5lkaf24I0DfU63cMm/3+br299UEYkuaHNmfDfM414uktiPlZCNJbQA==}
     peerDependencies:
@@ -446,7 +456,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@react-spring/three/9.5.5_856661370c4154024b0fae564b30ec75:
+  /@react-spring/three/9.5.5_qvtgcnymifkaesypvzlewmhmou:
     resolution: {integrity: sha512-9kTIaSceqFIl5EIrdwM7Z53o5I+9BGNVzbp4oZZYMao+GMAWOosnlQdDG5GeqNsIqfW9fZCEquGqagfKAxftcA==}
     peerDependencies:
       '@react-three/fiber': '>=6.0'
@@ -457,7 +467,7 @@ packages:
       '@react-spring/core': 9.5.5_react@18.2.0
       '@react-spring/shared': 9.5.5_react@18.2.0
       '@react-spring/types': 9.5.5
-      '@react-three/fiber': 8.8.7_2137c920617d15d2047c79c8f29af71a
+      '@react-three/fiber': 8.8.7_ee34sidbpuk5ebd4phepfgxxdi
       react: 18.2.0
       three: 0.145.0
     dev: false
@@ -466,7 +476,24 @@ packages:
     resolution: {integrity: sha512-7I/qY8H7Enwasxr4jU6WmtNK+RZ4Z/XvSlDvjXFVe7ii1x0MoSlkw6pD7xuac8qrHQRm9BTcbZNyeeKApYsvCg==}
     dev: false
 
-  /@react-three/drei/9.32.7_81ae07c1de1b447621ec29f562086018:
+  /@react-three/cannon/6.5.2_uhpwtqxveqbhj627ldjxqgr2ti:
+    resolution: {integrity: sha512-d7qH2XMVtHRkCaMUWpLkWSD9JPiE570gy8LoP7WBw+Ui+hI9ZiFx9HDaX5+Y6wzbGJd1WvELWaG9O0cOtk2rmw==}
+    peerDependencies:
+      '@react-three/fiber': '>=8'
+      react: '>=18'
+      three: '>=0.139'
+    dependencies:
+      '@pmndrs/cannon-worker-api': 2.3.2_three@0.145.0
+      '@react-three/fiber': 8.8.7_ee34sidbpuk5ebd4phepfgxxdi
+      cannon-es: 0.20.0
+      cannon-es-debugger: 1.0.0_som7bopzbtfq33iw7u4afg5fgy
+      react: 18.2.0
+      three: 0.145.0
+    transitivePeerDependencies:
+      - typescript
+    dev: false
+
+  /@react-three/drei/9.32.7_qgxapqo6dnchmipmfh2wecdada:
     resolution: {integrity: sha512-F9XkOod8kVg/OQNaal0uyO1EHiWAnxbroHbXACOZlLrTKtzTkzGBV3gnyPs0Y4erBURIJ/4JCakWy4qqs9C7jg==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
@@ -478,8 +505,8 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.19.0
-      '@react-spring/three': 9.5.5_856661370c4154024b0fae564b30ec75
-      '@react-three/fiber': 8.8.7_2137c920617d15d2047c79c8f29af71a
+      '@react-spring/three': 9.5.5_qvtgcnymifkaesypvzlewmhmou
+      '@react-three/fiber': 8.8.7_ee34sidbpuk5ebd4phepfgxxdi
       '@use-gesture/react': 10.2.20_react@18.2.0
       detect-gpu: 4.0.42
       glsl-noise: 0.0.0
@@ -501,7 +528,7 @@ packages:
       zustand: 3.7.2_react@18.2.0
     dev: false
 
-  /@react-three/fiber/8.8.7_2137c920617d15d2047c79c8f29af71a:
+  /@react-three/fiber/8.8.7_ee34sidbpuk5ebd4phepfgxxdi:
     resolution: {integrity: sha512-+RB5sLpEm/7UG1dQSOsH9HjQecKQOPlunX6yXKVCFKuuh8ZwjxG8ayNmafy4m/HbjMbMu5CVElUke1KjS/uDyw==}
     peerDependencies:
       expo: '>=43.0'
@@ -529,7 +556,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-reconciler: 0.27.0_react@18.2.0
-      react-use-measure: 2.1.1_react-dom@18.2.0+react@18.2.0
+      react-use-measure: 2.1.1_biqbaboplfbrettd7655fr4n2y
       scheduler: 0.21.0
       suspend-react: 0.0.8_react@18.2.0
       three: 0.145.0
@@ -707,6 +734,25 @@ packages:
   /caniuse-lite/1.0.30001414:
     resolution: {integrity: sha512-t55jfSaWjCdocnFdKQoO+d2ct9C59UZg4dY3OnUlSZ447r8pUtIKdp0hpAzrGFultmTC+Us+KpKi4GZl/LXlFg==}
     dev: true
+
+  /cannon-es-debugger/1.0.0_som7bopzbtfq33iw7u4afg5fgy:
+    resolution: {integrity: sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g==}
+    peerDependencies:
+      cannon-es: 0.x
+      three: 0.x
+      typescript: '>=3.8'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      cannon-es: 0.20.0
+      three: 0.145.0
+      typescript: 4.8.4
+    dev: false
+
+  /cannon-es/0.20.0:
+    resolution: {integrity: sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA==}
+    dev: false
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -1445,7 +1491,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /react-use-measure/2.1.1_react-dom@18.2.0+react@18.2.0:
+  /react-use-measure/2.1.1_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig==}
     peerDependencies:
       react: '>=16.13'
@@ -1575,10 +1621,12 @@ packages:
       react: 18.2.0
     dev: false
 
-  /tailwindcss/3.1.8:
+  /tailwindcss/3.1.8_postcss@8.4.17:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
@@ -1681,7 +1729,6 @@ packages:
     resolution: {integrity: sha512-QCh+85mCy+h0IGff8r5XWzOVSbBO+KfeYrMQh7NJ58QujwcE22u+NUSmUxqF+un70P9GXKxa2HCNiTTMJknyjQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /update-browserslist-db/1.0.9_browserslist@4.21.4:
     resolution: {integrity: sha512-/xsqn21EGVdXI3EXSum1Yckj3ZVZugqyOZQ/CxYPBD/R+ko9NSUScf8tFF4dOKY+2pvSSJA/S+5B8s4Zr4kyvg==}
